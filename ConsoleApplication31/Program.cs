@@ -1,15 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApplication31
+class Program
 {
-	class Program
+	static void Main()
 	{
-		static void Main(string[] args)
+		var numb = new int[8];
+		int[] denom = { 2, 0, 4, 4, 0, 8 };
+		for (int i = 2; i < 10; i++)
 		{
+			numb[i - 2] = (int)Math.Pow(2.0, i);
+		}
+		for (int i = 0; i < numb.Length; i++)
+		{
+			try
+			{
+				Console.WriteLine(numb[i] + " / " + denom[i] + " is\t" + numb[i] / denom[i]);
+			}
+			catch
+			{
+				Console.WriteLine("Exception");
+			}
+				
 		}
 	}
 }
